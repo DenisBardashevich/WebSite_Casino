@@ -2252,3 +2252,8 @@
     padding: 10px 20px; 
     opacity: 1; 
   }
+
+  .logo{
+    color: white;
+    font-size: 30px;
+  }
