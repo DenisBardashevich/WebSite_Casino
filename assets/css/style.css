@@ -630,6 +630,10 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     padding: 22px 30px 20px;
+    /* text-align: center; */
+  }
+
+  .faqBlock .tabcontent{
     text-align: center;
   }
   .tabcontent > div {
