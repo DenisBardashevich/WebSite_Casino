@@ -613,6 +613,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  const headerToggler = document.querySelector('.header-toggler');  // Кнопка-бургер
+  const menu = document.querySelector('.headerMenu');  // Меню
+
+  if (headerToggler && menu) {
+    headerToggler.addEventListener('click', function() {
+      // Переключаем класс для анимации
+      menu.classList.toggle('header-menu--open');
+
+      // Меняем иконку с гамбургера на крестик
+      this.classList.toggle('header-toggler--open');
+    });
+  } else {
+    console.error('Элементы не найдены');
+  }
 });
 
 
@@ -625,6 +639,9 @@ document.querySelectorAll('.faqBlock__listItemTitle').forEach(function(item) {
     desc.classList.toggle('open');
   });
 });
+
+
+
 
 
 
