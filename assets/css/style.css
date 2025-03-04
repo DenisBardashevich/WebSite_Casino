@@ -1256,7 +1256,7 @@
     bottom: 0;
     padding: 20px;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.785);
     width: 100%;
   }
   .blogBlock__banner a::before {
@@ -2261,3 +2261,5 @@
     color: white;
     font-size: 30px;
   }
+
+  
