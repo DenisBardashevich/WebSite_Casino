@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VictoryBet</title>
+        <meta
+            name="description"
+            content="Join FantasyChampions – the ultimate fantasy sports experience! Create your dream team, compete in leagues, track live scores, and win exciting rewards."
+        />
+        
+        <link rel="icon" href="assets/img/favicon.ico" />
+        <link rel="stylesheet" href="assets/css/normalize.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script defer src="assets/js/script.js"></script>
+
+    </head>
+    <body>
+        <header id="headerTop">
+            <a href="/" class="logo_mobile"><p class="logo">VictoryBet</p></a>
+            <nav class="headerBlock headerMenu" id="header">
+              <a href="/" class="logo">
+                <p class="logo">VictoryBet</p>
+              </a>
+              <ul>
+                <li class="header-menu__item"><a href="about.html">About Us</a></li>
+                <li class="header-menu__item">
+                  <a href="indian-t20-league.html">Indian T20 League</a>
+                </li>
+                <li class="header-menu__item"><a href="offers.html">Offers</a></li>
+                <li class="header-menu__item">
+                  <a href="contacts.html">Contact us</a>
+                </li>
+                <li class="header-menu__item">
+                  <a href="VictoryBet.apk" class="mainButton">Download Now</a>
+                </li>
+              </ul>
+            </nav>
+            <span class="header-toggler"></span>
+          </header>        
+
+          <main>
+            <article>
+                <section class="mainSection" id="mainSection">
+                    <div class="mainBlock">
+                      <img src="assets/img/bg3.jpg" alt="VictoryBet Blitz">
+                      <div>
+                        <h1>
+                          Discover Our Fantasy Scoring System: Maximize Your Points in VictoryBet Blitz.
+                        </h1>
+                        <p><a href="contacts.html" class="mainButton">Get the App</a></p>
+                      </div>
+                    </div>
+                  </section>
+                        
+                  <section class="policySection" id="policySection">
+                    <div class="policyBlock">
+                        <div class="tab">
+                            <button class="tablinks active" onclick="openEvent(event, 'event_1')">
+                                <span>Cricket</span>
+                            </button>
+                            <button class="tablinks" onclick="openEvent(event, 'event_2')">
+                                <span>Football</span>
+                            </button>
+                            <button class="tablinks" onclick="openEvent(event, 'event_3')">
+                                <span>Kabaddi</span>
+                            </button>
+                        </div>
+                
+                        <div id="event_1" class="tabcontent" style="display: block">
+                            <p>
+                                Cricket is an intricate sport with multiple formats (T20, ODI, Test),
+                                and the scoring criteria differ depending on the format being played. For
+                                "VictoryBet Blitz," you might implement the following point system:
+                            </p>
+                
+                            <h3>1. Overview of Scoring</h3>
+                            <div class="pointBlock">
+                                <div>Runs Accumulated</div>
+                                <div>1 point for every run scored.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Boundaries</div>
+                                <div>4 points for each four, 6 points for every six.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div> wickets Taken</div>
+                                <div>20 points for each wicket captured.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Catches Made</div>
+                                <div>10 points per catch.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Run Outs</div>
+                                <div>15 points for each run-out participation.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Stumpings</div>
+                                <div>15 points per stumping.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Half-Centuries (50 Runs)</div>
+                                <div>20 bonus points for scoring 50 runs.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Centuries (100 Runs)</div>
+                                <div>50 bonus points for scoring 100 runs.</div>
+                            </div>
+                
+                            <h3>2. Points Related to Team Performance</h3>
+                            <div class="pointBlock">
+                                <div>Match Victory</div>
+                                <div>50 points awarded to the winning side.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Match Draw (Test Matches)</div>
+                                <div>25 points allocated.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>MVP (Most Valuable Player)</div>
+                                <div>
+                                    30 bonus points awarded based on overall performance metrics.
+                                </div>
+                            </div>
+                
+                            <h3>3. Points for Special Events</h3>
+                            <div class="pointBlock">
+                                <div>Hat-trick (Three Wickets in Consecutive Deliveries)</div>
+                                <div>40 bonus points for bowlers.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>5-Wicket Haul</div>
+                                <div>50 bonus points.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Century While Chasing</div>
+                                <div>30 bonus points.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Winning a Match in the Final Over</div>
+                                <div>20 bonus points.</div>
+                            </div>
+                
+                            <h3>Implementation within VictoryBet Blitz</h3>
+                            <ul>
+                                <li>
+                                    You could develop a leaderboard that showcases cumulative
+                                    points earned from matches.
+                                </li>
+                                <li>
+                                    Players may receive alerts for milestones (like achieving a century or taking a wicket).
+                                </li>
+                                <li>
+                                    Special badges could be awarded for reaching milestones (e.g., 1000
+                                    points) to enhance player engagement.
+                                </li>
+                            </ul>
+                        </div>
+                
+                        <div id="event_2" class="tabcontent" style="display: none">
+                            <p>
+                                Football features straightforward scoring but emphasizes player involvement 
+                                and specific events. For "VictoryBet Blitz," the following point allocation 
+                                could be considered:
+                            </p>
+                
+                            <h3>1. Overview of Scoring</h3>
+                            <div class="pointBlock">
+                                <div>Goals Scored</div>
+                                <div>5 points for every goal.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Assists</div>
+                                <div>3 points for each assist made.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Saves (For Goalkeepers)</div>
+                                <div>2 points for each save.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Match Wins</div>
+                                <div>50 points for winning a match.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Clean Sheets (For Goalkeepers)</div>
+                                <div>10 points.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Yellow Card</div>
+                                <div>-3 points.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Red Card</div>
+                                <div>-10 points.</div>
+                            </div>
+                
+                            <h3>2. Bonus Points for Milestones</h3>
+                            <div class="pointBlock">
+                                <div>Hat-trick (Three Goals in a Single Match)</div>
+                                <div>20 bonus points.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Scoring in a Final Match</div>
+                                <div>30 points.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>MVP of the Match</div>
+                                <div>25 points.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Winning a Cup Tournament</div>
+                                <div>100 points.</div>
+                            </div>
+                
+                            <h3>Implementation within VictoryBet Blitz</h3>
+                            <ul>
+                                <li>
+                                    Incorporate a weekly tournament feature that allows users to compete
+                                    for the highest points based on their performances.
+                                </li>
+                                <li>
+                                    Provide individual player statistics showcasing goals,
+                                    assists, and other notable contributions.
+                                </li>
+                                <li>
+                                    Allow customizable avatars that reward success in matches 
+                                    through upgrades and cosmetic additions.
+                                </li>
+                            </ul>
+                        </div>
+                
+                        <div id="event_3" class="tabcontent" style="display: none">
+                            <p>
+                                Kabaddi, while primarily popular in South Asia, is steadily gaining 
+                                popularity around the world. The scoring in kabaddi differs significantly 
+                                from other sports. Here's how to design a points system for 
+                                "VictoryBet Blitz":
+                            </p>
+                
+                            <h3>1. Scoring Overview</h3>
+                            <div class="pointBlock">
+                                <div>Points for Raids</div>
+                                <div>
+                                    5 points for a successful raid (when a raider touches opponents
+                                    and returns safely).
+                                </div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Bonus Points for Touching Opponents</div>
+                                <div>1 point for each opponent touched during a raid.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Tackle Points</div>
+                                <div>10 points for each successful tackle made.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>All-Out of Opponent Team</div>
+                                <div>20 bonus points for achieving an all-out.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Victory</div>
+                                <div>50 points for winning the match.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Super Raid (3 or More Opponents in One Turn)</div>
+                                <div>15 bonus points.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>Defense (Successful Stops)</div>
+                                <div>2 points for each successful defensive action.</div>
+                            </div>
+                
+                            <h3>2. Additional Points</h3>
+                            <div class="pointBlock">
+                                <div>MVP of the Match</div>
+                                <div>25 bonus points.</div>
+                            </div>
+                            <div class="pointBlock">
+                                <div>League/Season Winner</div>
+                                <div>100 points.</div>
+                            </div>
+                
+                            <h3>Implementation in VictoryBet Blitz</h3>
+                            <ul>
+                                <li>
+                                    Enable users to form teams, promoting competition and alliances.
+                                </li>
+                                <li>
+                                    Maintain a monthly leaderboard highlighting top players,
+                                    encouraging consistent engagement.
+                                </li>
+                                <li>
+                                    Introduce features that allow players to customize their teams, 
+                                    earning special points for notable achievements.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>      
+              <section class="policySection" id="policySection">
+                <div class="policyBlock">
+                  <h3>General Features for All Sports in VictoryBet Blitz</h3>
+      
+                  <ul>
+                    <li>
+                      <b>Leaderboard System</b>: Incorporate global and local
+                      leaderboards so players can see how they stack up against others
+                      in their region and the world.
+                    </li>
+      
+                    <li>
+                      <b>Achievements</b>: Players could earn badges and titles that
+                      display their skills and engagement level within each sport,
+                      motivating them to push for higher scores.
+                    </li>
+      
+                    <li>
+                      <b>Match Stats</b>: Detailed insights following matches,
+                      demonstrating not only the points accumulated but also areas for
+                      improvement, would provide a richer experience.
+                    </li>
+      
+                    <li>
+                      <b>Rewards System</b>: Introduce in-game rewards for
+                      accumulating points, such as exclusive content, access to
+                      special events, or physical merchandise.
+                    </li>
+      
+                    <li>
+                      <b>Social Integration</b>: Allow players to share achievements
+                      on social media platforms, further promoting the app and
+                      encouraging friendly competition.
+                    </li>
+      
+                    <li>
+                      <b>Regular Updates</b>: Keep the points and achievements fresh
+                      through regular updates and events, maintaining engagement and
+                      interest over time.
+                    </li>
+                  </ul>
+      
+                  <p>
+                    Blanketing your app "VictoryBet Blitz" with a thoughtful points
+                    system across cricket, football, and kabaddi can profoundly
+                    enhance user experience. By carefully considering how points are
+                    awarded, you not only increase user engagement but also cultivate
+                    a loyal community around your app. Keep your point system
+                    transparent and interactive, allowing for continuous evolution and
+                    responsiveness to player feedback. The future of sports gaming
+                    hinges on active player involvement, and a great points system can
+                    be a pivotal factor in achieving just that.
+                  </p>
+                </div>
+              </section>
+      
+              <section class="aboutSection" style="padding: 6px" id="aboutSection">
+                <div class="aboutBlock">
+                  <h2 style="display: none">Points system</h2>
+                  <p>
+                    <a href="VictoryBet.apk" style="margin: auto" class="mainButton">Download Now</a>
+                  </p>
+                </div>
+              </section>
+            </article>
+          </main>          <footer>
+            <div class="footerBlock">
+              <div class="footerBlock__top">
+                <p class="logo">VictoryBet</p>
+                <div>
+                  <p>Security &amp; Game Integrity</p>
+                  <div>
+                    <a href="responsible-gaming.html" class="mainButton">Responsibly<br>Play</a>
+                    <img src="assets/img/18.png" alt="VictoryBet Blitz">
+                  </div>
+                </div>
+              </div>
+              <div class="footerBlock__menu">
+                <div class="footerBlock__menu">
+                  <h3>DISCLAIMER</h3>
+                  <p>
+                    VictoryBet Blitz is a fictional cricket game app. All gameplay,
+                    player stats, and scenarios are for entertainment purposes only.
+                    We do not guarantee accuracy or real-world application. Users
+                    participate at their own risk. Please play responsibly and enjoy!
+                  </p>
+                </div>
+                <div class="footerBlock__menu">
+                  <h3>FIND OUT MORE</h3>
+                  <a href="fantasy-points-system.html">Fantasy Points System</a>
+                  <a href="how-to-play.html">Fantasy Rules</a>
+                  <a href="tds.html">New TDS Rules</a>
+                  <a href="gst_info.html">New GST Rules</a>
+                  <a href="refer-earn.html">Refer &amp; Earn</a>
+                  <a href="faq.html">FAQs</a>
+                </div>
+                <div class="footerBlock__menu">
+                  <h3>ABOUT US</h3>
+                  <a href="/">Home</a>
+                  <a href="about.html">About us</a>
+                  <a href="privacy-policy.html">Privacy Policy</a>
+                  <a href="terms-conditions.html">Terms and Conditions</a>
+                  <a href="withdrawal-policies.html">Withdrawal Policy</a>
+                  <a href="fair-play.html">Fair Play</a>
+                  <a href="offers.html">Offers</a>
+                  <a href="blog.html">Blogs</a>
+                  <a href="career.html">Career</a>
+                  <a href="press-release.html">Press Release</a>
+                </div>
+                <div class="footerBlock__menu">
+                  <h3>SUPPORT</h3>
+                  <p>Contact Us</p>
+                  <p>
+                    Mail Us:
+                    <a href="mailto:contact@VictoryBet Blitz.com">contact@VictoryBet Blitz.com</a>
+                  </p>
+                  <p>
+                    Customer Support Number:
+                    <a href="tel:+91428541928">+91428541928</a>
+                  </p>
+                </div>
+              </div>
+              <div class="footerBlock__bottom">
+                <h3>Payment Partners</h3>
+                <div>
+                  <img src="assets/img/icon_3.png" alt="icon">
+                  <img src="assets/img/icon_4.png" alt="icon">
+                  <img src="assets/img/icon_5.png" alt="icon">
+                  <img src="assets/img/icon_6.png" alt="icon">
+                  <img src="assets/img/icon_7.png" alt="icon">
+                  <img src="assets/img/icon_8.png" alt="icon">
+                </div>
+              </div>
+            </div>
+            <div class="footerCopy">
+              <p>
+
+                VictoryBet Blitz is intended for players aged 18 and older. It features
+                mature content and gameplay elements. By downloading, you confirm that
+                you meet the age requirement. Play responsibly and enjoy!
+                            </p>
+            </div>
+          </footer>
+    </body>
+</html>
