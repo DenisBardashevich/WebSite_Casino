@@ -575,16 +575,20 @@ function plusDivs(n) {
 
 function showDivs(n) {
   let slides = document.querySelectorAll(".reviewsBlock__listItems");
-
-  if (n >= slides.length) {
-    slideIndex = 0; // Переключаемся на первый слайд
-  } 
-  if (n < 0) {
-    slideIndex = slides.length - 1; // Переключаемся на последний слайд
+  
+  if (slides.length === 0) {
+    return; // Останавливаем выполнение, если элементов нет
   }
 
-  slides.forEach(slide => slide.style.display = "none"); // Скрываем все слайды
-  slides[slideIndex].style.display = "flex"; // Показываем текущий слайд
+  if (n >= slides.length) {
+    slideIndex = 0;
+  }
+  if (n < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  slides.forEach(slide => slide.style.display = "none");
+  slides[slideIndex].style.display = "flex";
 }
 
 
@@ -595,20 +599,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let title = item.querySelector(".faqBlock__listItemTitle");
     let desc = item.querySelector(".faqBlock__listItemTitleDesc");
 
-    // Добавляем обработчик события на заголовок
     title.addEventListener("click", function () {
-      // Закрываем все остальные
-      document.querySelectorAll(".faqBlock__listItem").forEach((el) => {
-        if (el !== item) {
-          el.classList.remove("active");
-        }
-      });
+      if (desc.style.maxHeight && desc.style.maxHeight !== "0px") {
+        desc.style.maxHeight = "0px";
+      } else {
+        // Сначала закрываем все открытые элементы
+        document.querySelectorAll(".faqBlock__listItemTitleDesc").forEach((el) => {
+          el.style.maxHeight = "0px";
+        });
 
-      // Переключаем класс active у текущего элемента
-      item.classList.toggle("active");
+        // Открываем текущий
+        desc.style.maxHeight = desc.scrollHeight + "px";
+      }
     });
   });
 });
+
 
 
 document.querySelectorAll('.faqBlock__listItemTitle').forEach(function(item) {

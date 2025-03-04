@@ -2247,13 +2247,12 @@
     overflow: hidden; 
     max-height: 0; 
     padding: 0 20px; 
-    opacity: 0; 
     transition:  0.3s ease;
+    
   }
   
   .faqBlock__listItemTitleDesc.open {
     max-height: 500px; 
-    padding: 10px 20px; 
     opacity: 1; 
   }
 
