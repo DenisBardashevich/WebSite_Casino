@@ -41,23 +41,23 @@
     list-style: disc;
   }
   .mainBlock,
-  .headerBlock,
+  .headerContainer,
   .bannerBlock,
-  .blogBlock,
+  .blogContainer,
   .reviewsBlock,
   .breadcrumbs div,
   .infoBlock,
   .usersbarBlock,
   .widrawbarBlock,
-  .advantagesBlock,
+  .upBlock,
   .catalogBlock,
   .installBlock,
   .aboutBlock,
   .contactBlock,
   .faqBlock,
   .reviewBlock,
-  .footerCopy,
-  .footerBlock {
+  .footerText_down,
+  .footerContainer {
     max-width: 1230px;
     margin: 0 auto;
   }
@@ -82,7 +82,7 @@
   .mainButton:hover {
     background-color: #f0cea0;
   }
-  .halfSizeBlock {
+  .SizesBlock {
     width: 50%;
   }
   .mainImg {
@@ -134,7 +134,7 @@
   }
   
   /* header */
-  .headerBlock {
+  .headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,30 +142,30 @@
     padding: 7.5px 30px 3.8px;
     gap: 10px;
   }
-  .headerBlock > div {
+  .headerContainer > div {
     display: flex;
   }
-  .headerBlock > div:last-child {
+  .headerContainer > div:last-child {
     display: flex;
     justify-content: end;
   }
-  .headerBlock > div > a {
+  .headerContainer > div > a {
     display: flex;
     align-items: center;
     gap: 7px;
   }
-  .headerBlock nav {
+  .headerContainer nav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
   }
-  .headerBlock nav a:not(.mainButton) {
+  .headerContainer nav a:not(.mainButton) {
     text-transform: uppercase;
     color: #ffffff;
   }
-  .headerBlock nav a:not(.mainButton):hover {
+  .headerContainer nav a:not(.mainButton):hover {
     color: #d8dfe8;
   }
   
@@ -185,62 +185,62 @@
     background: #0b0d3e;
     height: 72px;
   }
-  .headerBlock {
+  .headerContainer {
     width: 100%;
   }
-  .headerBlock ul {
+  .headerContainer ul {
     display: flex;
     align-items: center;
     margin: 0;
     gap: 32px;
   }
-  .headerBlock ul li a:not(.mainButton):not(.logo) {
+  .headerContainer ul li a:not(.mainButton):not(.logo) {
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
     position: relative;
   }
-  .headerBlock ul li a:not(.mainButton):not(.logo):hover {
+  .headerContainer ul li a:not(.mainButton):not(.logo):hover {
     color: #ffd29d;
   }
-  .header-toggler {
+  .header-burger {
     display: none;
     color: #ffffff;
     font-size: 35px;
   }
-  .header-toggler::after {
+  .header-burger::after {
     content: "\f0c9";
     font-family: "FontAwesome", sans-serif;
   }
-  .header-toggler--open::after {
+  .header-burger--open::after {
     content: "\f00d";
     color: #ffffff;
     font-family: "FontAwesome", sans-serif;
   }
-  .headerBlock img {
+  .headerContainer img {
     height: 33px;
   }
-  .logo_mobile {
+  .logo_mob {
     display: none;
   }
-  .logo_mobile img {
+  .logo_mob img {
     height: 33px;
   }
   
-  /* mainSection */
-  .mainSection {
+  /* mainContainer */
+  .mainContainer {
     position: relative;
     display: flex;
     align-items: flex-end;
     background-color: #ffffff;
   }
-  .mainSectionMain {
+  .mainContainerNew {
     background-image: none;
     background-color: #182643;
     overflow: hidden;
     
   }
-  .mainSection:not(.mainSectionMain) {
+  .mainContainer:not(.mainContainerNew) {
     padding: 20px;
   }
   .mainBlock {
@@ -256,12 +256,12 @@
   .mainBlock .mainButton {
     margin-top: 15px;
   }
-  .mainSection:not(.mainSectionMain) .mainBlock {
+  .mainContainer:not(.mainContainerNew) .mainBlock {
     position: relative;
     margin: 36px auto;
     overflow: hidden;
   }
-  .mainSection:not(.mainSectionMain) .mainBlock div {
+  .mainContainer:not(.mainContainerNew) .mainBlock div {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -275,7 +275,7 @@
     flex-direction: column;
     padding: 10px;
   }
-  .mainSection:not(.mainSectionMain) .mainBlock img {
+  .mainContainer:not(.mainContainerNew) .mainBlock img {
     width: 100%;
     border-radius: 7px;
     overflow: hidden;
@@ -283,23 +283,23 @@
   .mainBlock > h1 {
     margin-top: 0;
   }
-  .itc-slider {
+  .tabContainer_Main {
     position: relative;
     width: 100%;
     margin: 0 auto;
   }
-  .itc-slider-wrapper {
+  .tabContainer_Main-wrapper {
     overflow: hidden;
   }
-  .itc-slider-items {
+  .tabContainer_Main-items {
     display: flex;
     transition: transform 0.5s ease;
     will-change: transform;
   }
-  .itc-slider-transition-none {
+  .tabContainer_Main-transition-none {
     transition: none;
   }
-  .itc-slider-item {
+  .tabContainer_Main-item {
     flex: 0 0 100%;
     max-width: 100%;
     user-select: none;
@@ -307,7 +307,7 @@
     display: flex;
     position: relative;
   }
-  .itc-slider-item > div {
+  .tabContainer_Main-item > div {
     width: 100%;
     text-align: center;
     background: #ffffff;
@@ -316,12 +316,12 @@
     border: 1px solid #f5f0f0;
     padding: 40px 40px 30px 40px;
   }
-  .itc-slider-item img {
+  .tabContainer_Main-item img {
     width: 100%;
     object-fit: cover;
   }
   /* индикаторы */
-  .itc-slider-indicators {
+  .tabContainer_Main-indicators {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -333,7 +333,7 @@
     padding-left: 0;
     list-style: none;
   }
-  .itc-slider-indicator {
+  .tabContainer_Main-indicator {
     flex: 0 1 auto;
     box-sizing: content-box;
     width: 11px;
@@ -348,7 +348,7 @@
     border-bottom: 15px solid transparent;
     cursor: pointer;
   }
-  .itc-slider-indicator-active {
+  .tabContainer_Main-indicator-active {
     background-color: rgb(255 255 255 / 100%);
   }
   
@@ -465,24 +465,24 @@
   }
   
   /* advantageSection */
-  .advantagesSection {
+  .upSection {
     padding: 42px 15px;
   }
-  .advantagesSectionRed {
+  .upSectionRed {
     background-color: #182643;
   }
-  .advantagesSectionRed .advantagesBlock div {
+  .upSectionRed .upBlock div {
     background-color: #f3a712;
   }
-  .advantagesSectionRed .advantagesBlock div:hover {
+  .upSectionRed .upBlock div:hover {
     background-color: #f0cea0;
   }
-  .advantagesBlock {
+  .upBlock {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
-  .advantagesBlock div {
+  .upBlock div {
     background: #ffffff;
     border: 0.2px solid #a6a6a6;
     border-radius: 3px;
@@ -491,17 +491,17 @@
     justify-content: center;
     align-items: center;
   }
-  .advantagesBlock h3 {
+  .upBlock h3 {
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
   }
-  .advantagesBlock img {
+  .upBlock img {
     width: 50%;
     padding: 18px 0px;
     margin: 0 auto;
   }
-  .advantagesBlock p {
+  .upBlock p {
     padding: 20px 0;
     font-size: 14px;
     line-height: 5px;
@@ -551,12 +551,12 @@
     content: "\f107";
     font-family: "FontAwesome", "sans-serif";
   }
-  .faqBlock__listItemTitleDesc {
+  .faqBlockListItem_text {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
-  .faqBlock__listItemTitleDesc p {
+  .faqBlockListItem_text p {
     padding: 37px 35px 20px;
   }
   
@@ -602,11 +602,11 @@
     width: 100%;
     justify-content: center;
   }
-  .moreBlock__listItemTitleDesc .tablinks {
+  .moreBlock__listItemTitleDesc .tab_onClick {
     color: #a41623;
     font-weight: 600;
   }
-  .tablinks {
+  .tab_onClick {
     background-color: #ffffff;
     float: left;
     border: none;
@@ -621,11 +621,11 @@
     margin-bottom: 10px;
     margin-left: 10px;
   }
-  .tablinks.active {
+  .tab_onClick.active {
     background: #182643;
     color: #ffffff;
   }
-  .tabcontent {
+  .tabContainer {
     display: none;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -633,10 +633,10 @@
     /* text-align: center; */
   }
 
-  .faqBlock .tabcontent{
+  .faqBlock .tabContainer{
     text-align: center;
   }
-  .tabcontent > div {
+  .tabContainer > div {
     width: 100%;
     max-width: 790px;
     padding-right: 10px;
@@ -648,7 +648,7 @@
     text-decoration: none;
     font-weight: 400;
   }
-  .tabPolicy .tablinks {
+  .tabPolicy .tab_onClick {
     flex: 1;
     justify-content: center;
     border: 1px solid #ccc;
@@ -660,15 +660,15 @@
     font-size: 20px;
     width: 100%;
   }
-  .tabPolicy .tablinks.active {
+  .tabPolicy .tab_onClick.active {
     border-bottom: 1px solid #fff;
     background-color: #ffffff;
     color: #918450;
   }
-  .tabPolicy .tabcontent p {
+  .tabPolicy .tabContainer p {
     margin-bottom: 10px;
   }
-  .tabPolicy .tabcontent {
+  .tabPolicy .tabContainer {
     float: none;
     margin: 0px;
     width: 100%;
@@ -680,7 +680,7 @@
   .tabLeaderboard .tab {
     border-bottom: 2px solid #e2e3e5;
   }
-  .tabLeaderboard .tablinks {
+  .tabLeaderboard .tab_onClick {
     flex: 1;
     justify-content: center;
     border: none;
@@ -692,10 +692,10 @@
     font-size: 20px;
     width: 100%;
   }
-  .tabLeaderboard .tablinks.active {
+  .tabLeaderboard .tab_onClick.active {
     border-bottom: 4px solid #a41623;
   }
-  .tabLeaderboard .tabcontent {
+  .tabLeaderboard .tabContainer {
     background: #ffffff;
   }
   .faqSectionSport {
@@ -748,12 +748,12 @@
     content: "\f056";
     font-family: "FontAwesome", "sans-serif";
   }
-  .faqSectionSport .faqBlock__listItemTitleDesc {
+  .faqSectionSport .faqBlockListItem_text {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
-  .faqSectionSport .faqBlock__listItemTitleDesc p {
+  .faqSectionSport .faqBlockListItem_text p {
     padding: 16px 20px 16px 0;
   }
   
@@ -788,11 +788,11 @@
     border-radius: 50px;
   }
   
-  /* aboutSection */
-  .aboutSection {
+  /* NextContainerSection */
+  .NextContainerSection {
     padding: 60px 10px 80px;
   }
-  .aboutSectionGrey {
+  .faqSectionBG {
     background-color: #f9fafb;
   }
   .aboutBlock h2 {
@@ -931,10 +931,10 @@
   }
   
   /* reviewsSection */
-  .itc-slider-items-review {
+  .tabContainer_Main-items-review {
     max-width: 100%;
   }
-  .itc-slider-items-review > div {
+  .tabContainer_Main-items-review > div {
     display: flex;
     background-color: #ffffff;
     border-radius: 7px;
@@ -944,14 +944,14 @@
     padding: 12px;
     text-align: left;
   }
-  .itc-slider-items-review > div > div {
+  .tabContainer_Main-items-review > div > div {
     border-left: 1px solid #e1e1e1;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
-  .itc-slider-items-review h4 {
+  .tabContainer_Main-items-review h4 {
     padding-right: 10px;
     padding-left: 10px;
     font-weight: 600;
@@ -963,30 +963,30 @@
     justify-content: center;
     flex-direction: column;
   }
-  .itc-slider-items-review img {
+  .tabContainer_Main-items-review img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
   }
-  .itc-slider-items-review > div > div i {
+  .tabContainer_Main-items-review > div > div i {
     font-size: 30px;
     line-height: 20px;
     color: #182643;
     font-weight: 900;
   }
-  .itc-slider-items-review > div > div i:last-of-type {
+  .tabContainer_Main-items-review > div > div i:last-of-type {
     margin-left: auto;
     margin-right: 0;
   }
-  .itc-slider-items-review > div > div p:last-child {
+  .tabContainer_Main-items-review > div > div p:last-child {
     text-align: right;
   }
-  .itc-slider-item-matches > div {
+  .tabContainer_Main-item-matches > div {
     display: flex;
     justify-content: space-between;
     gap: 7px;
   }
-  .itc-slider-item-matches > div img {
+  .tabContainer_Main-item-matches > div img {
     max-width: 120px;
   }
   
@@ -1067,7 +1067,7 @@
   .reviewsBlock__buttons {
     display: none;
   }
-  .reviewsBlock__listSlider button,
+  .reviewsBlock__Slider_list button,
   .reviewsBlock__buttons button {
     color: #03045e;
     cursor: pointer;
@@ -1077,7 +1077,7 @@
     transition: all 0.5s;
     box-sizing: border-box;
   }
-  .reviewsBlock__listSlider {
+  .reviewsBlock__Slider_list {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1100,10 +1100,10 @@
     flex-direction: column;
     align-items: center;
   }
-  .aboutBlock__img .reviewsBlock__listSlider {
+  .aboutBlock__img .reviewsBlock__Slider_list {
     position: relative;
   }
-  .aboutBlock__img .reviewsBlock__buttonLeft {
+  .aboutBlock__img .reviewsBlock__button_Left {
     position: absolute;
     left: 0;
   }
@@ -1111,7 +1111,7 @@
     position: absolute;
     right: 0;
   }
-  .aboutBlock__img .reviewsBlock__listSlider button,
+  .aboutBlock__img .reviewsBlock__Slider_list button,
   .aboutBlock__img .reviewsBlock__buttons button {
     color: #a9afb7;
     cursor: pointer;
@@ -1126,7 +1126,7 @@
     width: 24px;
     height: 24px;
   }
-  .aboutBlock__img .reviewsBlock__listSlider button:hover,
+  .aboutBlock__img .reviewsBlock__Slider_list button:hover,
   .aboutBlock__img .reviewsBlock__buttons button:hover {
     color: #000;
     border-color: #000;
@@ -1165,79 +1165,79 @@
     width: 100%;
   }
   /* blogSection */
-  .blogBlock {
+  .blogContainer {
     background-color: #ffffff;
     padding: 15px;
   }
-  .blogBlock__content {
+  .blogContainer__content {
     display: flex;
     flex-wrap: wrap;
     margin-top: 48px;
   }
-  .blogBlock__list {
+  .blogContainer__list {
     width: 66.66666667%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 21px;
   }
-  .blogBlock__app {
+  .blogContainer__app {
     width: 33.33333333%;
     padding: 0 24px;
     height: fit-content;
   }
-  .blogBlock__listItem {
+  .blogContainer__listItem {
     margin-bottom: 30px;
   }
-  .blogBlock__listItem h3 {
+  .blogContainer__listItem h3 {
     font-size: 16px;
     line-height: 21px;
     font-weight: 500;
     margin: 0 0 6px 0;
   }
-  .blogBlock__listItem > p {
+  .blogContainer__listItem > p {
     font-size: 14px;
     line-height: 26px;
     margin-top: 9px;
   }
-  .blogBlock__listItem > a:last-child {
+  .blogContainer__listItem > a:last-child {
     margin: 20px 0;
     display: inline-block;
   }
-  .blogBlock__listItem > a:hover {
+  .blogContainer__listItem > a:hover {
     color: #023e8a;
   }
-  .blogBlock__app img,
-  .blogBlock__listItem img {
+  .blogContainer__app img,
+  .blogContainer__listItem img {
     width: 100%;
   }
-  .blogBlock__app img {
+  .blogContainer__app img {
     max-width: 328px;
     margin: 0 auto 48px;
     display: flex;
   }
-  .blogBlock__app .mainButton {
+  .blogContainer__app .mainButton {
     width: 100%;
   }
   
-  .blogBlock__banner {
+  .blogContainer__banner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 3px;
     grid-row-gap: 3px;
   }
-  .blogBlock__banner a:first-child {
+  .blogContainer__banner a:first-child {
     grid-area: 1 / 1 / 3 / 3;
     max-height: 338px;
     height: 100%;
   }
-  .blogBlock__banner a {
+  .blogContainer__banner a {
     overflow: hidden;
     max-height: 168px;
     position: relative;
     height: 100%;
   }
-  .blogBlock__banner img {
+  .blogContainer__banner img {
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -1245,13 +1245,13 @@
     object-position: center;
     transition: all 0.3s;
   }
-  .blogBlock__banner a:hover img {
+  .blogContainer__banner a:hover img {
     width: 120%;
     height: 120%;
     object-fit: cover;
     object-position: 200%;
   }
-  .blogBlock__banner a div {
+  .blogContainer__banner a div {
     position: absolute;
     bottom: 0;
     padding: 20px;
@@ -1259,7 +1259,7 @@
     background-color: rgba(0, 0, 0, 0.785);
     width: 100%;
   }
-  .blogBlock__banner a::before {
+  .blogContainer__banner a::before {
     bottom: 0;
     content: "";
     display: block;
@@ -1268,7 +1268,7 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0);
   }
-  .blogBlock__banner a:hover::before {
+  .blogContainer__banner a:hover::before {
     background-color: rgba(0, 0, 0, 0.1);
   }
   
@@ -1305,74 +1305,74 @@
     background: #534d41;
     color: #ffffff;
   }
-  .footerBlock {
+  .footerContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 26px 15px 16px;
   }
-  .footerBlock__top {
+  .footerContainer__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 26px;
     border-bottom: 0.6px solid #f3a712;
   }
-  .footerBlock__top img {
+  .footerContainer__top img {
     height: 88px;
   }
-  .footerBlock__top > div > div {
+  .footerContainer__top > div > div {
     display: flex;
     gap: 10px;
     margin-top: 10px;
   }
-  .footerBlock__top > div > div img {
+  .footerContainer__top > div > div img {
     height: 53px;
   }
-  .footerBlock__menu {
+  .footerContainer__div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
-  .footerBlock__menu > .footerBlock__menu {
+  .footerContainer__div > .footerContainer__div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .footerBlock__menu > .footerBlock__menu a {
+  .footerContainer__div > .footerContainer__div a {
     color: #ffffff;
   }
-  .footerBlock__top > div {
+  .footerContainer__top > div {
     display: flex;
     flex-direction: column;
   }
-  .footerBlock > .footerBlock__menu {
+  .footerContainer > .footerContainer__div {
     padding: 26px 0;
     border-bottom: 0.6px solid #f3a712;
     gap: 30px;
   }
-  .footerBlock__bottom {
+  .footerContainer__bottom {
     padding: 0;
   }
-  .footerBlock__bottom div {
+  .footerContainer__bottom div {
     display: flex;
   }
-  .footerBlock__bottom img {
+  .footerContainer__bottom img {
     height: 36px;
     border-right: 2px solid #f3a712;
     padding-left: 10px;
     padding-right: 10px;
   }
-  .footerBlock__bottom img:first-child {
+  .footerContainer__bottom img:first-child {
     padding-left: 0;
   }
-  .footerBlock__bottom img:last-child {
+  .footerContainer__bottom img:last-child {
     border: none;
   }
-  .footerCopy {
+  .footerText_down {
     text-align: center;
     font-size: 16px;
   }
-  .footerBlock h3 {
+  .footerContainer h3 {
     color: #fff;
     text-transform: uppercase;
     padding: 16px 0;
@@ -1416,7 +1416,7 @@
     font-size: 16px;
     font-family: inherit;
   }
-  .contactBlock__formLine {
+  .contactBlock__forms {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -1441,7 +1441,7 @@
   .contactBlock .mainButton {
     margin: 0 auto;
   }
-  .contactSection .contactBlock__formLine {
+  .contactSection .contactBlock__forms {
     flex-direction: row;
   }
   .contactSection input,
@@ -1462,7 +1462,7 @@
     margin: 0 15px 30px;
     width: 100%;
   }
-  .contactSection .contactBlock__formLine {
+  .contactSection .contactBlock__forms {
     width: 100%;
   }
   .contactSection .contactBlock__formCheckbox input {
@@ -1504,11 +1504,11 @@
     color: #000000;
   }
   
-  .policySection {
+  .FourSection {
     padding: 34px 0;
     position: relative;
   }
-  .policySection__overlay {
+  .FourSection__overlay {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1552,7 +1552,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  .policyBlock__details {
+  .careerContainer {
     border-radius: 6px;
     width: calc(100% - 325px);
     background: #fff;
@@ -1588,7 +1588,7 @@
     margin-bottom: 15px;
     line-height: 24px;
   }
-  .policyBlock__details a {
+  .careerContainer a {
     font-weight: 600;
     color: #a41623;
   }
@@ -1603,13 +1603,13 @@
   .policyBlock__menu .faqBlock__listItemTitle {
     border: none !important;
   }
-  .policyBlock__details .tabcontent {
+  .careerContainer .tabContainer {
     background-color: #ffffff;
   }
-  .policyBlock__details .tabcontent .faqBlock__list {
+  .careerContainer .tabContainer .faqBlock__list {
     width: 100%;
   }
-  .policyBlock__details .tabcontent .faqBlock__listItemTitle {
+  .careerContainer .tabContainer .faqBlock__listItemTitle {
     background-color: #fbfbfb;
     color: #444;
     cursor: pointer;
@@ -1622,20 +1622,20 @@
     opacity: 0.5;
     margin: 20px 0;
   }
-  .policyBlock__details .tabcontent .faqBlock__listItemTitle:hover,
-  .policyBlock__details .tabcontent .faqBlock__listItemActive {
+  .careerContainer .tabContainer .faqBlock__listItemTitle:hover,
+  .careerContainer .tabContainer .faqBlock__listItemActive {
     opacity: 1;
   }
-  .policyBlock__details .tabcontent .faqBlock__listItemTitle span::after {
+  .careerContainer .tabContainer .faqBlock__listItemTitle span::after {
     content: "\f055";
     font-size: 12px;
   }
-  .policyBlock__details .tabcontent .faqBlock__listItemTitleDesc p {
+  .careerContainer .tabContainer .faqBlockListItem_text p {
     padding: 20px;
     border: 1px solid #ddd;
     margin-bottom: 10px;
   }
-  .policyBlock__details .tabcontent .faqBlock__listItemTitleDesc ul {
+  .careerContainer .tabContainer .faqBlockListItem_text ul {
     border: 1px solid #ddd;
     margin-top: -11px;
     border-top: 3px solid #ffffff;
@@ -1644,10 +1644,10 @@
   .policyBlock .tab {
     justify-content: flex-start;
   }
-  .policyBlock .tabcontent {
+  .policyBlock .tabContainer {
     display: block;
   }
-  .policyBlock .tablinks {
+  .policyBlock .tab_onClick {
     font-size: 23px;
     border: 1px solid #dbdbdb;
     padding: 20px 9px;
@@ -1659,7 +1659,7 @@
     display: flex;
     flex-direction: column;
   }
-  .policyBlock__menu .tablinks {
+  .policyBlock__menu .tab_onClick {
     margin: 0;
     border-radius: 0;
     background: #fff;
@@ -1671,11 +1671,11 @@
     text-align: left;
     box-shadow: none;
   }
-  .policyBlock__menu .tablinks.active {
+  .policyBlock__menu .tab_onClick.active {
     color: #fff;
     background-color: #182643;
   }
-  .policyBlock__menu .tablinks span {
+  .policyBlock__menu .tab_onClick span {
     font-weight: 500;
     line-height: 1.2;
     font-size: 15px;
@@ -1901,7 +1901,7 @@
       padding: 100px 30px 30px 30px;
       align-items: baseline;
     }
-    .headerBlock {
+    .headerContainer {
       position: fixed;
       background-color: #000000;
       z-index: 200;
@@ -1914,7 +1914,7 @@
     header nav ul {
       flex-direction: column;
     }
-    .header-toggler {
+    .header-burger {
       display: flex;
       padding: 20px;
       z-index: 201;
@@ -1922,19 +1922,19 @@
       right: 0;
       top: 0;
     }
-    .headerBlock__logo::before {
+    .headerContainer__logo::before {
       display: none;
     }
-    .headerBlock__logo {
+    .headerContainer__logo {
       justify-content: space-between;
     }
-    .headerBlock ul {
+    .headerContainer ul {
       gap: 20px;
       padding: 0;
       width: 100%;
       align-items: center;
     }
-    .headerBlock ul li a:not(.mainButton):not(.logo) {
+    .headerContainer ul li a:not(.mainButton):not(.logo) {
       color: #182643;
     }
     .headerMenu > a {
@@ -1944,7 +1944,7 @@
     .header-menu--open + span {
       position: fixed;
     }
-    .logo_mobile {
+    .logo_mob {
       display: block;
       width: fit-content;
     }
@@ -1955,7 +1955,7 @@
     .releaseItem {
       width: 30%;
     }
-    .blogBlock__banner h3 {
+    .blogContainer__banner h3 {
       font-size: 15px;
     }
     .league__list {
@@ -1966,23 +1966,23 @@
     .aboutBlock__list {
       flex-direction: column;
     }
-    .halfSizeBlock {
+    .SizesBlock {
       width: 100%;
     }
-    .footerBlock > .footerBlock__menu:last-child,
-    .footerBlock > .footerBlock__menu:first-child {
+    .footerContainer > .footerContainer__div:last-child,
+    .footerContainer > .footerContainer__div:first-child {
       width: 100%;
     }
-    .footerBlock > .footerBlock__menu:first-child {
+    .footerContainer > .footerContainer__div:first-child {
       align-items: center;
     }
-    .footerBlock > .footerBlock__menu:last-child {
+    .footerContainer > .footerContainer__div:last-child {
       margin-top: 25px;
       padding-left: 0;
     }
-    .blogBlock__list,
-    .advantagesBlock,
-    .blogBlock__banner {
+    .blogContainer__list,
+    .upBlock,
+    .blogContainer__banner {
       grid-template-columns: repeat(2, 1fr);
     }
     .aboutBlock__triple {
@@ -1993,15 +1993,15 @@
     }
   }
   @media (max-width: 767px) {
-    .itc-slider-items-review > div {
+    .tabContainer_Main-items-review > div {
       flex-direction: column;
       align-items: center;
     }
-    .itc-slider-items-review > div > div {
+    .tabContainer_Main-items-review > div > div {
       border-left: none;
     }
     .bannerSection,
-    .mainBlock > div.halfSizeBlock:first-child {
+    .mainBlock > div.SizesBlock:first-child {
       display: none;
     }
     .policyBlock h1,
@@ -2033,59 +2033,59 @@
       display: block;
       width: 100%;
     }
-    .policyBlock__details {
+    .careerContainer {
       width: 100%;
     }
-    .mainSection {
+    .mainContainer {
       min-height: auto;
       height: auto;
     }
-    .blogBlock__list {
+    .blogContainer__list {
       width: 100%;
     }
-    .blogBlock__app {
+    .blogContainer__app {
       width: 100%;
     }
-    .blogBlock__list {
+    .blogContainer__list {
       padding: 0;
     }
     .moreBlock__listItemTitleDesc .tab {
       flex-direction: column;
     }
-    .moreBlock__listItemTitleDesc .tablinks {
+    .moreBlock__listItemTitleDesc .tab_onClick {
       width: 100%;
       border-bottom: solid 1px #333333;
     }
-    .moreBlock__listItemTitleDesc .tabcontent {
+    .moreBlock__listItemTitleDesc .tabContainer {
       flex-direction: column;
     }
-    .moreBlock__listItemTitleDesc .tabcontent > div {
+    .moreBlock__listItemTitleDesc .tabContainer > div {
       width: 100%;
     }
-    .footerCopy {
+    .footerText_down {
       padding: 20px;
     }
     .releaseItem {
       width: 47%;
     }
-    .footerBlock__bottom div {
+    .footerContainer__bottom div {
       flex-wrap: wrap;
       justify-content: center;
       row-gap: 10px;
     }
-    .footerBlock__bottom img {
+    .footerContainer__bottom img {
       border: none;
     }
-    .footerBlock__menu {
+    .footerContainer__div {
       grid-template-columns: repeat(2, 1fr);
     }
-    .footerBlock__top {
+    .footerContainer__top {
       flex-direction: column;
     }
-    .mainSection:not(.mainSectionMain) .mainBlock div {
+    .mainContainer:not(.mainContainerNew) .mainBlock div {
       width: 100%;
     }
-    .mainSection:not(.mainSectionMain) .mainBlock {
+    .mainContainer:not(.mainContainerNew) .mainBlock {
       margin: 0;
     }
   }
@@ -2096,10 +2096,10 @@
     h1 {
       font-size: 18px;
     }
-    .policyBlock .tabcontent {
+    .policyBlock .tabContainer {
       padding: 0;
     }
-    .itc-slider-items-review {
+    .tabContainer_Main-items-review {
       max-width: 100%;
     }
     .mainBlock > div:last-child {
@@ -2115,7 +2115,7 @@
     .tabPolicy .tab {
       flex-direction: column;
     }
-    .contactSection .contactBlock__formLine {
+    .contactSection .contactBlock__forms {
       flex-direction: column;
     }
     .contactSection input,
@@ -2128,33 +2128,33 @@
     .releaseItem {
       width: 100%;
     }
-    .mainSectionError h1 {
+    .mainContainerError h1 {
       font-size: 48px;
     }
-    .mainSectionError p {
+    .mainContainerError p {
       font-size: 48px;
       line-height: 40px;
     }
-    .blogBlock__list,
-    .blogBlock__banner {
+    .blogContainer__list,
+    .blogContainer__banner {
       grid-template-columns: repeat(1, 1fr);
     }
-    .blogBlock__banner a:first-child {
+    .blogContainer__banner a:first-child {
       grid-area: 1;
     }
-    .blogBlock__banner a {
+    .blogContainer__banner a {
       max-height: none;
     }
-    .advantagesBlock,
+    .upBlock,
     .policyBlock__careers {
       grid-template-columns: repeat(1, 1fr);
     }
-    .footerBlock__menu {
+    .footerContainer__div {
       grid-template-columns: repeat(1, 1fr);
       align-items: center;
       text-align: center;
     }
-    .footerBlock__menu > .footerBlock__menu {
+    .footerContainer__div > .footerContainer__div {
       align-items: center;
     }
     .league__list {
@@ -2173,11 +2173,11 @@
     font-weight: 700;
   }
   
-  .ageRestrictionSection {
+  .mainSectionIndex {
     display: none;
   }
   @media (max-width: 767px) {
-    .ageRestrictionSection {
+    .mainSectionIndex {
       position: fixed;
       width: 100%;
       height: 200px;
@@ -2189,7 +2189,7 @@
       text-align: center;
       z-index: 1001;
     }
-    .ageRestrictionBlock {
+    .mainIndexBlock {
       bottom: 0;
       position: absolute;
       width: 100%;
@@ -2200,14 +2200,14 @@
       border-radius: 8px;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
     }
-    .ageRestrictionBlock__buttons {
+    .mainIndexBlock__buttons {
       margin-top: 20px;
       display: flex;
       justify-content: center;
       gap: 20px;
     }
   
-    .ageRestrictionSectionPICBLUR {
+    .mainSectionIndexPICBLUR {
       position: fixed;
       top: 0;
       left: 0;
@@ -2219,11 +2219,11 @@
       z-index: 9999;
     }
   
-    .ageRestrictionBlockPICBLUR {
+    .mainIndexBlockPICBLUR {
       height: 60%;
     }
   
-    .ageRestrictionBlockPICBLUR img {
+    .mainIndexBlockPICBLUR img {
       width: auto;
       height: 100%;
       display: block;
@@ -2233,19 +2233,19 @@
   .mainButton{
     font-size: 20px !important;
   }
-  .faqBlock__listItemTitleDesc {
+  .faqBlockListItem_text {
     display: none;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-in-out;
   }
   
-  .faqBlock__listItemTitleDesc.active {
+  .faqBlockListItem_text.active {
     display: block;
     max-height: 200px; 
   }
 
-  .faqBlock__listItemTitleDesc {
+  .faqBlockListItem_text {
     display: block; 
     overflow: hidden; 
     max-height: 0; 
@@ -2254,7 +2254,7 @@
     
   }
   
-  .faqBlock__listItemTitleDesc.open {
+  .faqBlockListItem_text.open {
     max-height: 500px; 
     opacity: 1; 
   }

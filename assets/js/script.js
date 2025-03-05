@@ -33,7 +33,7 @@ class ItcSlider {
   state;
   resizeObserver;
 
-  constructor(el, config = {}, prefix = 'itc-slider-') {
+  constructor(el, config = {}, prefix = 'tabContainer_Main-') {
     this.state = {
       prefix,
       el,
@@ -74,7 +74,7 @@ class ItcSlider {
     return null;
   }
 
-  static getOrCreateInstance(target, config = {}, prefix = 'itc-slider-') {
+  static getOrCreateInstance(target, config = {}, prefix = 'tabContainer_Main-') {
     const elSlider = typeof target === 'string' ? document.querySelector(target) : target;
     const result = this.getInstance(elSlider);
     if (result) {
@@ -86,7 +86,7 @@ class ItcSlider {
   }
 
   static createInstances() {
-    document.querySelectorAll('[data-slider="itc-slider"]').forEach((el) => {
+    document.querySelectorAll('[data-slider="tabContainer_Main"]').forEach((el) => {
       const { dataset } = el;
       const params = {};
       Object.keys(dataset).forEach((key) => {
@@ -159,7 +159,7 @@ class ItcSlider {
     if (this.state.isMoving) {
       e.preventDefault();
     }
-    if (!(e.target.closest('.itc-slider-btn') || e.target.closest('.itc-slider-indicators'))) {
+    if (!(e.target.closest('.tabContainer_Main-btn') || e.target.closest('.tabContainer_Main-indicators'))) {
       return;
     }
     const classBtnPrev = this.state.prefix + this.constructor.BTN_PREV;
@@ -551,13 +551,13 @@ ItcSlider.createInstances();
 
 
 function openEvent(evt, eventName) {
-  // Получаем все элементы с классом "tabcontent" и скрываем их
-  let tabcontent = document.querySelectorAll(".tabcontent");
-  tabcontent.forEach(tab => tab.style.display = "none");
+  // Получаем все элементы с классом "tabContainer" и скрываем их
+  let tabContainer = document.querySelectorAll(".tabContainer");
+  tabContainer.forEach(tab => tab.style.display = "none");
 
-  // Получаем все элементы с классом "tablinks" и убираем у них класс "active"
-  let tablinks = document.querySelectorAll(".tablinks");
-  tablinks.forEach(tab => tab.classList.remove("active"));
+  // Получаем все элементы с классом "tab_onClick" и убираем у них класс "active"
+  let tab_onClick = document.querySelectorAll(".tab_onClick");
+  tab_onClick.forEach(tab => tab.classList.remove("active"));
 
   // Показываем текущую вкладку
   document.getElementById(eventName).style.display = "block";
@@ -597,14 +597,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   faqItems.forEach((item) => {
     let title = item.querySelector(".faqBlock__listItemTitle");
-    let desc = item.querySelector(".faqBlock__listItemTitleDesc");
+    let desc = item.querySelector(".faqBlockListItem_text");
 
     title.addEventListener("click", function () {
       if (desc.style.maxHeight && desc.style.maxHeight !== "0px") {
         desc.style.maxHeight = "0px";
       } else {
         // Сначала закрываем все открытые элементы
-        document.querySelectorAll(".faqBlock__listItemTitleDesc").forEach((el) => {
+        document.querySelectorAll(".faqBlockListItem_text").forEach((el) => {
           el.style.maxHeight = "0px";
         });
 
@@ -613,7 +613,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  const headerToggler = document.querySelector('.header-toggler');  // Кнопка-бургер
+  const headerToggler = document.querySelector('.header-burger');  // Кнопка-бургер
   const menu = document.querySelector('.headerMenu');  // Меню
 
   if (headerToggler && menu) {
@@ -622,7 +622,7 @@ document.addEventListener("DOMContentLoaded", function () {
       menu.classList.toggle('header-menu--open');
 
       // Меняем иконку с гамбургера на крестик
-      this.classList.toggle('header-toggler--open');
+      this.classList.toggle('header-burger--open');
     });
   } else {
     console.error('Элементы не найдены');
